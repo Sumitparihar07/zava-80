@@ -28,6 +28,5 @@ public class T2P9 {
             }
         }
         System.out.println(size);
-        sc.close();
     }
 }

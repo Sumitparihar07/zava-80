@@ -1,12 +1,10 @@
 import java.util.Scanner;
-
 public class T3_Q4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int N;
         System.out.print("Enter size of square matrix : ");
         N = sc.nextInt();
-
         int[][] matrix = new int[N][N];
         int sum = 0;
         System.out.println("Enter values for matrix : ");
@@ -18,20 +16,17 @@ public class T3_Q4 {
                 if (i == j) {
                     sum += matrix[i][j];
                 }
-
                 // Secondary diagonal
                 if (i + j == N - 1) {
                     sum += matrix[i][j];
                 }
             }
         }
-
         // Remove duplicate center element for odd N
         if (N % 2 == 1) {
             int mid = N / 2;
             sum -= matrix[mid][mid];
         }
-
         System.out.println("Sum of diagonals : " + sum);
     }
 }
